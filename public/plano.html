@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plano Mensal | Horizonte da Esperança</title>
+    <meta
+      name="description"
+      content="Plano mensal do Horizonte da Esperança para continuar utilizando os compartilhamentos após o limite gratuito."
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">HE</span>
+          <div>
+            <p class="eyebrow">Plano mensal</p>
+            <h1>Horizonte da Esperança</h1>
+          </div>
+        </div>
+
+        <nav class="topbar-links" aria-label="Acesso rápido">
+          <a href="./index.html">Voltar ao gerador</a>
+          <a href="./comentarios.html">Comentários</a>
+        </nav>
+      </header>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Continuidade de uso</p>
+          <h2>Seu limite gratuito foi pensado para começar. O plano mantém seu ritmo de compartilhamento.</h2>
+          <p class="hero-text" id="planIntroText">
+            Depois do período gratuito, você pode seguir com o plano mensal e continuar usando os recursos de compartilhamento do site.
+          </p>
+        </div>
+
+        <aside class="hero-status">
+          <div class="status-panel">
+            <p class="status-label">Plano atual</p>
+            <p class="status-time">R$ 12,90</p>
+            <p class="status-note">Valor mensal para continuar compartilhando sem o limite gratuito.</p>
+          </div>
+
+          <div class="trust-strip">
+            <span>Mensal</span>
+            <span>Sem fidelidade</span>
+            <span>Uso contínuo</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="creator-section">
+        <div class="panel-heading">
+          <p class="eyebrow">Apresentação do plano</p>
+          <h2>Um plano simples para continuar publicando com consistência</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card pricing-card-highlight">
+            <p class="eyebrow">Plano mensal</p>
+            <h3>Continuidade de compartilhamento</h3>
+            <p class="price-amount">R$ 12,90<span>/mês</span></p>
+            <ul class="feature-list">
+              <li>Continuação do uso dos botões de compartilhamento</li>
+              <li>Formatos prontos para feed, story, TikTok e WhatsApp Status</li>
+              <li>Geração contínua de artes com novas mensagens</li>
+              <li>Experiência leve, simples e pensada para uso diário</li>
+              <li>Desbloqueio automatico por 31 dias apos a aprovacao do pagamento</li>
+            </ul>
+
+            <div class="status-panel plan-state-panel">
+              <p class="status-label" id="planStateBadge">Aguardando pagamento</p>
+              <p class="status-time plan-state-time" id="planStateTitle">Ativacao do plano</p>
+              <p class="status-note" id="planStateText">
+                O acesso mensal e liberado automaticamente quando o Mercado Pago confirma o pagamento.
+              </p>
+            </div>
+
+            <div class="trust-strip" id="planMeta">
+              <span>31 dias por pagamento</span>
+              <span>Ativacao automatica</span>
+              <span>Mercado Pago</span>
+            </div>
+
+            <p class="status-note checkout-note" id="checkoutConfigNotice">
+              O pagamento abre em ambiente seguro do Mercado Pago e retorna para esta pagina para concluir a ativacao.
+            </p>
+
+            <div class="editor-actions">
+              <button class="button button-primary" id="startCheckoutButton" type="button">
+                Pagar com Mercado Pago
+              </button>
+              <a class="button button-secondary" href="./index.html">Voltar ao gerador</a>
+            </div>
+          </article>
+
+          <article class="pricing-card">
+            <p class="eyebrow">Como funciona</p>
+            <h3>Fluxo claro para o usuario</h3>
+            <ul class="feature-list">
+              <li>O visitante usa até 30 compartilhamentos gratuitos</li>
+              <li>Ao atingir o limite, ele é redirecionado automaticamente para esta página</li>
+              <li>Ao clicar em pagar, o checkout e aberto no Mercado Pago</li>
+              <li>Quando o pagamento volta aprovado, o plano e liberado neste dispositivo</li>
+              <li>O acesso mensal expira em 31 dias e pode ser renovado com um novo pagamento</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./scripts/plan.js" defer></script>
+  </body>
+</html>
