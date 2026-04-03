@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizonte da Esperança</title>
+    <meta
+      name="description"
+      content="Mensagens bíblicas com paisagens aleatórias, formatos para Instagram, TikTok e outros canais, download simples e experiência segura."
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">HE</span>
+          <div>
+            <p class="eyebrow">Mensagens bíblicas para redes sociais</p>
+            <h1>Horizonte da Esperança</h1>
+          </div>
+        </div>
+
+        <nav class="topbar-links" aria-label="Acesso rápido">
+          <a href="#quadros">Quadros</a>
+          <a href="#gerador">Gerador</a>
+          <a href="#painel">Painel</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="./comentarios.html">Comentários</a>
+          <a href="./plano.html">Plano</a>
+        </nav>
+      </header>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Visual moderno, leve e fácil de usar</p>
+          <h2>Paisagens inspiradoras com mensagens de fé, amor, esperança e sabedoria.</h2>
+          <p class="hero-text">
+            Crie artes prontas para compartilhar no Instagram, TikTok, Facebook,
+            WhatsApp, Status, Reels e outros canais. O sistema troca a paisagem
+            automaticamente a cada 60 segundos e você pode baixar a arte ou a
+            paisagem atual.
+          </p>
+
+          <div class="hero-actions">
+            <button class="button button-primary" id="refreshButton" type="button">
+              Gerar nova arte
+            </button>
+            <button class="button button-secondary" id="toggleRotationButton" type="button">
+              Pausar rotação
+            </button>
+            <a class="button button-ghost" href="#seguranca">Ver segurança</a>
+          </div>
+        </div>
+
+        <aside class="hero-status">
+          <div class="status-panel">
+            <p class="status-label">Próxima troca</p>
+            <p class="status-time" id="countdownValue">01:00</p>
+            <p class="status-note" id="rotationLabel">Atualização automática ativa</p>
+          </div>
+
+          <div class="trust-strip">
+            <span>Sem cadastro</span>
+            <span>Sem cobrança</span>
+            <span>Download local</span>
+            <span>Imagens gratuitas</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="control-panel" id="quadros">
+        <div class="panel-heading">
+          <p class="eyebrow">Menus de quadro</p>
+          <h2>Escolha o formato ideal para cada rede</h2>
+        </div>
+
+        <div class="control-block">
+          <div class="block-labels">
+            <h3>Formatos</h3>
+            <p>TikTok, stories, feed, widescreen e outros layouts prontos.</p>
+          </div>
+          <div class="format-pills" id="formatPills"></div>
+        </div>
+
+        <div class="control-block">
+          <div class="block-labels">
+            <h3>Temas</h3>
+            <p>Selecione o tom da mensagem para manter consistência no conteúdo.</p>
+          </div>
+          <div class="theme-pills" id="themePills"></div>
+        </div>
+      </section>
+
+      <section class="workspace" id="gerador">
+        <article class="preview-card">
+          <div class="preview-header">
+            <div>
+              <p class="eyebrow">Prévia da arte</p>
+              <h2 id="selectedFormatName">Instagram Feed</h2>
+            </div>
+            <div class="format-meta">
+              <span id="currentFormatBadge">4:5</span>
+              <span id="currentResolutionLabel">1080 x 1350</span>
+            </div>
+          </div>
+
+          <div class="canvas-frame" id="canvasFrame">
+            <canvas
+              id="shareCanvas"
+              width="1080"
+              height="1350"
+              aria-label="Arte gerada para redes sociais"
+            ></canvas>
+            <div class="canvas-loading" id="canvasLoading">Montando uma nova arte...</div>
+          </div>
+        </article>
+
+        <aside class="side-panel">
+          <div class="message-card">
+            <div class="message-topline">
+              <span class="message-theme" id="messageTheme">Esperança</span>
+              <span class="message-platform" id="messagePlatform">Instagram Feed</span>
+            </div>
+            <h3 class="message-text" id="messageText">Carregando mensagem...</h3>
+            <p class="message-reference" id="messageReference"></p>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <span class="info-label">Origem da imagem</span>
+              <span class="info-value" id="imageSource">Gerando...</span>
+            </div>
+            <div class="info-card">
+              <span class="info-label">Uso recomendado</span>
+              <span class="info-value" id="currentFormatUse">Feed e posts verticais</span>
+            </div>
+          </div>
+
+          <div class="usage-card">
+            <div>
+              <span class="info-label">Compartilhamentos grátis</span>
+              <span class="usage-value" id="shareUsageCount">0 de 30 usados</span>
+              <p class="usage-note" id="shareUsageNote">
+                Você pode compartilhar gratuitamente até 30 vezes antes de ver o plano mensal.
+              </p>
+            </div>
+            <a class="button button-ghost" id="viewPlanButton" href="./plano.html">Ver plano</a>
+          </div>
+
+          <div class="action-group">
+            <button class="button button-primary" id="downloadButton" type="button">
+              Baixar arte pronta
+            </button>
+            <button class="button button-secondary" id="downloadBackgroundButton" type="button">
+              Baixar paisagem atual
+            </button>
+            <button class="button button-secondary" id="copyCaptionButton" type="button">
+              Copiar legenda
+            </button>
+            <button class="button button-secondary" id="shareButton" type="button">
+              Compartilhar
+            </button>
+          </div>
+
+          <div class="share-grid">
+            <button class="share-chip" id="instagramButton" type="button">
+              Instagram
+            </button>
+            <button class="share-chip" id="facebookButton" type="button">
+              Facebook
+            </button>
+            <button class="share-chip" id="whatsappButton" type="button">
+              WhatsApp
+            </button>
+          </div>
+
+          <div class="mini-note">
+            <p>
+              Antes do primeiro download, o site pede sua autorização para
+              iniciar o salvamento com segurança. Em celulares, o navegador do
+              aparelho controla esse processo.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="safety-section" id="seguranca">
+        <div class="panel-heading">
+          <p class="eyebrow">Segurança e responsabilidade</p>
+          <h2>Informações claras para transmitir confiança ao público</h2>
+        </div>
+
+        <div class="safety-grid">
+          <article class="safety-card">
+            <h3>Compromisso com segurança</h3>
+            <ul>
+              <li>Este site não exige login, senha, cartão ou dados bancários.</li>
+              <li>O download é iniciado no navegador e não lê arquivos pessoais do seu aparelho.</li>
+              <li>Quando disponível, o navegador abre o seletor nativo de salvamento do dispositivo.</li>
+              <li>As paisagens exibidas são gratuitas ou geradas automaticamente pelo próprio projeto.</li>
+            </ul>
+          </article>
+
+          <article class="safety-card">
+            <h3>Responsabilidade de uso</h3>
+            <ul>
+              <li>As mensagens são inspiradas em princípios e referências bíblicas para fins de encorajamento.</li>
+              <li>O conteúdo não substitui acompanhamento pastoral, médico, psicológico ou jurídico.</li>
+              <li>Ao compartilhar, o usuário é responsável por respeitar políticas das plataformas e direitos de terceiros.</li>
+              <li>Evite associar as artes a promessas enganosas, golpes ou usos fora do propósito cristão e ético.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="disclosure-card">
+          <h3>Termo de transparência</h3>
+          <p>
+            Ao usar o Horizonte da Esperança, você concorda em utilizar as artes
+            com responsabilidade, respeitando as regras das redes sociais e os
+            direitos envolvidos nas imagens gratuitas. O site busca oferecer uma
+            experiência simples, segura e confiável para todos os públicos.
+          </p>
+        </div>
+      </section>
+
+      <section class="creator-section" id="painel">
+        <div class="panel-heading">
+          <p class="eyebrow">Painel de mensagens</p>
+          <h2>Cadastre novas mensagens sem editar código</h2>
+        </div>
+
+        <div class="creator-grid">
+          <article class="editor-card">
+            <div class="block-labels">
+              <h3>Nova mensagem bíblica</h3>
+              <p>As mensagens salvas aqui ficam disponíveis no gerador deste navegador.</p>
+            </div>
+
+            <div class="field-grid">
+              <label class="field">
+                <span>Tema</span>
+                <select id="messageThemeSelect">
+                  <option value="esperanca">Esperança</option>
+                  <option value="fe">Fé</option>
+                  <option value="amor">Amor</option>
+                  <option value="motivacao">Motivação</option>
+                  <option value="sabedoria">Sabedoria</option>
+                </select>
+              </label>
+
+              <label class="field field-full">
+                <span>Mensagem</span>
+                <textarea
+                  id="customMessageText"
+                  rows="5"
+                  placeholder="Digite uma mensagem bíblica inspiradora para gerar novas artes."
+                ></textarea>
+              </label>
+
+              <label class="field field-full">
+                <span>Referência</span>
+                <input
+                  id="customMessageReference"
+                  type="text"
+                  placeholder="Ex.: Inspirado em Salmos 23:1"
+                />
+              </label>
+            </div>
+
+            <div class="editor-actions">
+              <button class="button button-primary" id="saveMessageButton" type="button">
+                Salvar mensagem
+              </button>
+              <button class="button button-secondary" id="exportMessagesButton" type="button">
+                Exportar mensagens
+              </button>
+              <button class="button button-secondary" id="importMessagesButton" type="button">
+                Importar mensagens
+              </button>
+              <button class="button button-secondary" id="resetMessagesButton" type="button">
+                Limpar personalizadas
+              </button>
+            </div>
+
+            <input id="messagesFileInput" type="file" accept="application/json" hidden />
+          </article>
+
+          <aside class="library-card">
+            <div class="library-stats">
+              <div class="stat-card">
+                <span class="info-label">Padrão</span>
+                <strong id="defaultMessageCount">0</strong>
+              </div>
+              <div class="stat-card">
+                <span class="info-label">Personalizadas</span>
+                <strong id="customMessageCount">0</strong>
+              </div>
+              <div class="stat-card">
+                <span class="info-label">Total</span>
+                <strong id="totalMessageCount">0</strong>
+              </div>
+            </div>
+
+            <div class="block-labels">
+              <h3>Mensagens personalizadas</h3>
+              <p>Remova ou revise o conteúdo que já foi cadastrado.</p>
+            </div>
+
+            <div class="message-library" id="customMessagesList"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal-backdrop" id="permissionModal" hidden>
+      <div
+        class="permission-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="permissionTitle"
+        aria-describedby="permissionDescription"
+      >
+        <p class="eyebrow">Permissão para download</p>
+        <h2 id="permissionTitle">Você autoriza salvar arquivos neste dispositivo?</h2>
+        <p id="permissionDescription" class="modal-text">
+          O site usa apenas o mecanismo seguro do próprio navegador para salvar a
+          arte ou a paisagem. Nenhum arquivo pessoal é lido por este site.
+        </p>
+        <div class="modal-points">
+          <span>Salvamento local</span>
+          <span>Sem acesso às suas fotos</span>
+          <span>Sem envio de arquivos</span>
+        </div>
+        <div class="modal-actions">
+          <button class="button button-primary" id="grantPermissionButton" type="button">
+            Permitir download
+          </button>
+          <button class="button button-secondary" id="cancelPermissionButton" type="button">
+            Agora não
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/app.js" defer></script>
+  </body>
+</html>
