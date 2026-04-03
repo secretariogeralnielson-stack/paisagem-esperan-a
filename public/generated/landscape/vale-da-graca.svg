@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Vale da Graca">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a3d57"/>
+      <stop offset="62%" stop-color="#f7d8ae"/>
+      <stop offset="100%" stop-color="#fdf5dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.21" cy="0.28" r="0.32">
+      <stop offset="0%" stop-color="#ffe9bb" stop-opacity="0.96"/>
+      <stop offset="75%" stop-color="#ffe9bb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#7ec6c6"/>
+      <stop offset="100%" stop-color="#d0eef2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="340" cy="250" r="82" fill="#ffe9bb" opacity="0.95"/>
+  <circle cx="340" cy="250" r="128" fill="#ffe9bb" opacity="0.18"/>
+  <path d="M0 540 C240 500 360 420 520 458 C680 500 850 360 1070 396 C1240 426 1440 520 1600 470 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M0 515 C160 430 330 500 560 410 C770 330 960 390 1170 332 C1320 290 1460 295 1600 260 L1600 900 L0 900 Z" fill="#1d3040"/>
+  <path d="M0 620 C170 565 290 470 500 500 C720 530 850 430 1060 472 C1245 512 1405 472 1600 438 L1600 900 L0 900 Z" fill="#345364"/>
+  <path d="M0 720 C250 675 360 600 560 625 C780 655 980 610 1170 642 C1350 674 1470 630 1600 610 L1600 900 L0 900 Z" fill="#527777"/>
+  <path d="M0 900 L0 700 C180 660 330 715 470 680 C650 635 790 760 980 720 C1140 685 1280 710 1600 662 L1600 900 Z" fill="#6b9b6c"/>
+  <path d="M220 900 C320 770 500 720 720 758 C900 790 1060 860 1220 820 C1290 800 1350 770 1405 728 L1450 900 Z" fill="url(#water)" opacity="0.9"/>
+  <path d="M0 900 L0 822 C170 782 340 785 450 748 C620 698 760 786 900 768 C1080 745 1190 708 1320 734 C1450 758 1520 740 1600 724 L1600 900 Z" fill="#7ca783"/>
+</svg>
