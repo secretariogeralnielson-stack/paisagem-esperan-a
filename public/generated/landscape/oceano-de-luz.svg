@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Oceano de Luz">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#20385d"/>
+      <stop offset="62%" stop-color="#f8b980"/>
+      <stop offset="100%" stop-color="#fdf5dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.51" cy="0.23" r="0.35">
+      <stop offset="0%" stop-color="#fff0c6" stop-opacity="0.96"/>
+      <stop offset="75%" stop-color="#fff0c6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#76b6d8"/>
+      <stop offset="100%" stop-color="#d4eef6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="820" cy="210" r="80" fill="#fff0c6" opacity="0.95"/>
+  <circle cx="820" cy="210" r="135" fill="#fff0c6" opacity="0.18"/>
+  <path d="M0 540 C220 500 360 430 500 470 C690 520 870 360 1080 402 C1270 440 1450 520 1600 470 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M0 530 C170 420 350 500 540 410 C760 310 940 390 1160 336 C1310 300 1470 315 1600 280 L1600 900 L0 900 Z" fill="#283453"/>
+  <path d="M0 620 C170 560 310 462 520 492 C740 530 900 430 1095 470 C1300 512 1430 466 1600 432 L1600 900 L0 900 Z" fill="#3f506f"/>
+  <path d="M0 710 C240 665 360 600 580 625 C760 645 980 604 1160 640 C1360 680 1490 632 1600 612 L1600 900 L0 900 Z" fill="#5a7d93"/>
+  <path d="M0 900 L0 700 C180 660 320 700 460 672 C650 635 820 758 990 720 C1170 680 1320 702 1600 664 L1600 900 Z" fill="#79926f"/>
+  <path d="M200 900 C320 780 520 728 760 760 C940 784 1085 856 1260 820 C1335 802 1395 770 1452 732 L1500 900 Z" fill="url(#water)" opacity="0.9"/>
+  <path d="M0 900 L0 820 C180 780 330 780 470 748 C620 710 760 782 910 766 C1085 746 1200 704 1340 736 C1470 760 1545 742 1600 724 L1600 900 Z" fill="#8eb0a8"/>
+</svg>
