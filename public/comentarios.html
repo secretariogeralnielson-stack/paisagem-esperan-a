@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comentários, Sugestões e Reclamações</title>
+    <meta
+      name="description"
+      content="Página de comentários, sugestões e reclamações do Horizonte da Esperança."
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-left"></div>
+    <div class="ambient ambient-right"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">HE</span>
+          <div>
+            <p class="eyebrow">Contato e atendimento</p>
+            <h1>Comentários, sugestões e reclamações</h1>
+          </div>
+        </div>
+
+        <nav class="topbar-links" aria-label="Acesso rápido">
+          <a href="./index.html">Gerador</a>
+          <a href="./plano.html">Plano</a>
+        </nav>
+      </header>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Fale conosco</p>
+          <h2>Para acessar o formulário, informe seu nome e e-mail.</h2>
+          <p class="hero-text">
+            O formulário abaixo prepara sua mensagem para envio ao e-mail
+            secretariogeralnielson2026@gmail.com. Assim fica simples receber
+            comentários, sugestões e reclamações com identificação do remetente.
+          </p>
+        </div>
+
+        <aside class="hero-status">
+          <div class="status-panel">
+            <p class="status-label">E-mail de destino</p>
+            <p class="status-time email-target">secretariogeralnielson2026@gmail.com</p>
+            <p class="status-note">
+              Use esta página para centralizar retorno do público com clareza e organização.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="creator-section">
+        <div class="panel-heading">
+          <p class="eyebrow">Formulário</p>
+          <h2>Atendimento simples e fácil em qualquer tela</h2>
+        </div>
+
+        <div class="creator-grid">
+          <article class="editor-card">
+            <div class="block-labels">
+              <h3>Identificação</h3>
+              <p>Nome e e-mail são obrigatórios antes do envio da mensagem.</p>
+            </div>
+
+            <form id="feedbackForm" class="field-grid">
+              <label class="field">
+                <span>Nome completo</span>
+                <input id="feedbackName" name="name" type="text" required placeholder="Digite seu nome" />
+              </label>
+
+              <label class="field">
+                <span>E-mail</span>
+                <input id="feedbackEmail" name="email" type="email" required placeholder="voce@exemplo.com" />
+              </label>
+
+              <label class="field field-full">
+                <span>Tipo de contato</span>
+                <select id="feedbackType" name="type" required>
+                  <option value="Comentario">Comentário</option>
+                  <option value="Sugestao">Sugestão</option>
+                  <option value="Reclamacao">Reclamação</option>
+                </select>
+              </label>
+
+              <label class="field field-full">
+                <span>Assunto</span>
+                <input id="feedbackSubject" name="subject" type="text" required placeholder="Resumo do seu contato" />
+              </label>
+
+              <label class="field field-full">
+                <span>Mensagem</span>
+                <textarea
+                  id="feedbackMessage"
+                  name="message"
+                  rows="7"
+                  required
+                  placeholder="Escreva aqui sua mensagem com o máximo de clareza possível."
+                ></textarea>
+              </label>
+
+              <div class="editor-actions field-full">
+                <button class="button button-primary" id="sendFeedbackButton" type="submit">
+                  Enviar para o e-mail
+                </button>
+                <button class="button button-secondary" id="copyFeedbackButton" type="button">
+                  Copiar mensagem
+                </button>
+              </div>
+            </form>
+          </article>
+
+          <aside class="library-card">
+            <div class="block-labels">
+              <h3>Como funciona</h3>
+              <p>Processo simples para todos os públicos.</p>
+            </div>
+
+            <div class="message-library">
+              <article class="message-item">
+                <div class="message-item-top">
+                  <span class="message-item-theme">1. Identifique-se</span>
+                </div>
+                <p class="message-item-text">Informe nome e e-mail para prosseguir com o contato.</p>
+              </article>
+
+              <article class="message-item">
+                <div class="message-item-top">
+                  <span class="message-item-theme">2. Escolha o tipo</span>
+                </div>
+                <p class="message-item-text">Selecione se sua mensagem é comentário, sugestão ou reclamação.</p>
+              </article>
+
+              <article class="message-item">
+                <div class="message-item-top">
+                  <span class="message-item-theme">3. Envie</span>
+                </div>
+                <p class="message-item-text">
+                  O site monta o texto e abre o envio para o e-mail
+                  secretariogeralnielson2026@gmail.com.
+                </p>
+              </article>
+            </div>
+
+            <div class="mini-note">
+              <p>
+                Em celulares e computadores, o envio usa o aplicativo de e-mail
+                disponível no dispositivo. A mensagem também pode ser copiada se
+                você preferir colar manualmente.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./scripts/comments.js" defer></script>
+  </body>
+</html>
