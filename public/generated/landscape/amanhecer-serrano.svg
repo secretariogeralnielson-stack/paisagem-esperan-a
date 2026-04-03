@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Amanhecer Serrano">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2c4372"/>
+      <stop offset="62%" stop-color="#f6c87c"/>
+      <stop offset="100%" stop-color="#fdf5dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.73" cy="0.24" r="0.32">
+      <stop offset="0%" stop-color="#fff1bd" stop-opacity="0.96"/>
+      <stop offset="75%" stop-color="#fff1bd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#8fc6c9"/>
+      <stop offset="100%" stop-color="#d0eef2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="1175" cy="220" r="78" fill="#fff1bd" opacity="0.95"/>
+  <circle cx="1175" cy="220" r="120" fill="#fff1bd" opacity="0.18"/>
+  <path d="M0 540 C240 480 340 430 500 470 C690 520 860 360 1060 410 C1230 450 1430 520 1600 470 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M0 530 C170 430 330 480 520 400 C760 300 930 390 1140 330 C1310 280 1440 300 1600 250 L1600 900 L0 900 Z" fill="#21344d"/>
+  <path d="M0 620 C190 560 300 450 520 490 C700 520 840 430 1050 470 C1260 520 1400 460 1600 430 L1600 900 L0 900 Z" fill="#37526c"/>
+  <path d="M0 710 C240 660 350 600 570 620 C770 640 970 600 1150 640 C1350 690 1490 630 1600 610 L1600 900 L0 900 Z" fill="#5f7f79"/>
+  <path d="M0 900 L0 690 C170 650 290 700 450 670 C650 630 790 760 940 710 C1100 650 1230 700 1400 690 C1490 684 1540 675 1600 660 L1600 900 Z" fill="#7f9a65"/>
+  <path d="M220 900 C300 760 500 720 720 760 C850 783 1000 860 1180 820 C1260 802 1320 770 1380 720 L1430 900 Z" fill="url(#water)" opacity="0.88"/>
+  <path d="M0 900 L0 815 C160 775 320 782 430 750 C570 710 710 780 820 765 C980 744 1120 700 1280 735 C1400 760 1505 745 1600 720 L1600 900 Z" fill="#86a283"/>
+</svg>
