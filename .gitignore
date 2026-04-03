@@ -1,0 +1,6 @@
+.env
+.netlify
+node_modules
+cache/*.json
+cache/images/*
+!cache/images/.gitkeep
