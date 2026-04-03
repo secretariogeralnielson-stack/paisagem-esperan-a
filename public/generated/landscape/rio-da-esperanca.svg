@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Rio da Esperanca">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#243a5d"/>
+      <stop offset="62%" stop-color="#f7cb98"/>
+      <stop offset="100%" stop-color="#fdf5dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.32" cy="0.21" r="0.34">
+      <stop offset="0%" stop-color="#fff4d0" stop-opacity="0.96"/>
+      <stop offset="75%" stop-color="#fff4d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#73c2cb"/>
+      <stop offset="100%" stop-color="#daf3f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="500" cy="190" r="76" fill="#fff4d0" opacity="0.95"/>
+  <circle cx="500" cy="190" r="124" fill="#fff4d0" opacity="0.18"/>
+  <path d="M0 545 C215 490 355 430 520 470 C700 510 880 370 1075 408 C1245 442 1440 520 1600 472 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M0 530 C180 430 360 495 545 410 C760 320 930 392 1150 340 C1290 305 1450 312 1600 284 L1600 900 L0 900 Z" fill="#1f314d"/>
+  <path d="M0 620 C180 560 315 460 520 494 C720 528 882 438 1088 470 C1290 508 1420 468 1600 436 L1600 900 L0 900 Z" fill="#385269"/>
+  <path d="M0 710 C240 662 350 600 566 624 C780 648 980 606 1170 640 C1362 676 1490 632 1600 612 L1600 900 L0 900 Z" fill="#50766b"/>
+  <path d="M0 900 L0 698 C165 658 320 708 468 672 C640 634 800 754 988 716 C1165 680 1320 704 1600 662 L1600 900 Z" fill="#759668"/>
+  <path d="M210 900 C310 776 510 720 735 760 C905 790 1075 860 1250 820 C1320 804 1388 770 1455 724 L1505 900 Z" fill="url(#water)" opacity="0.9"/>
+  <path d="M0 900 L0 818 C165 780 320 780 470 750 C630 714 772 784 928 768 C1110 744 1220 708 1350 736 C1480 758 1548 742 1600 724 L1600 900 Z" fill="#86a17c"/>
+</svg>
