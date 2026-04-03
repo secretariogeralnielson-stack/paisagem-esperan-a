@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Campo Sereno">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#31477a"/>
+      <stop offset="62%" stop-color="#f4c17f"/>
+      <stop offset="100%" stop-color="#fdf5dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.68" cy="0.18" r="0.32">
+      <stop offset="0%" stop-color="#fff2ce" stop-opacity="0.96"/>
+      <stop offset="75%" stop-color="#fff2ce" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#86c8dd"/>
+      <stop offset="100%" stop-color="#dbf2f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="1080" cy="160" r="74" fill="#fff2ce" opacity="0.95"/>
+  <circle cx="1080" cy="160" r="120" fill="#fff2ce" opacity="0.18"/>
+  <path d="M0 540 C220 492 330 432 520 474 C710 518 870 362 1070 406 C1260 448 1450 515 1600 472 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M0 528 C150 438 320 495 515 408 C730 310 930 388 1130 338 C1290 298 1460 308 1600 280 L1600 900 L0 900 Z" fill="#26324d"/>
+  <path d="M0 620 C170 560 300 458 520 494 C720 526 870 434 1075 470 C1270 508 1420 468 1600 434 L1600 900 L0 900 Z" fill="#425971"/>
+  <path d="M0 708 C250 660 360 602 575 624 C790 648 985 606 1175 642 C1365 678 1495 632 1600 612 L1600 900 L0 900 Z" fill="#688272"/>
+  <path d="M0 900 L0 690 C180 650 330 710 470 672 C650 625 810 758 985 714 C1180 668 1330 706 1600 662 L1600 900 Z" fill="#7aa06d"/>
+  <path d="M240 900 C320 780 520 720 745 758 C920 786 1085 858 1245 820 C1320 802 1380 772 1440 730 L1495 900 Z" fill="url(#water)" opacity="0.9"/>
+  <path d="M0 900 L0 822 C165 782 320 782 460 748 C620 708 760 784 905 766 C1100 742 1210 706 1338 736 C1472 760 1542 742 1600 722 L1600 900 Z" fill="#8da874"/>
+</svg>
